@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页--添加页面</title>
+</head>
+<body>
+<form action="/person/addPerson" method="post">
+    <fieldset>
+        <legend><h1>添加表单！！！</h1></legend>
+        <input type="hidden" name="id" />
+    <h2>姓名：</h2> <input type="text" name="name" />
+    <hr/>
+    <h2>年龄：</h2> <input type="text" name="age" />
+    <hr/>
+    <h2>地址：</h2> <input type="text" name="address"/>
+    <hr/>
+    <input type="submit" value="提交"><br><br><input type="reset" value="重置">
+     <hr/>
+        <a th:href="@{/person/selectAllPerson}">返回列表</a>
+    </fieldset>
+</form>
+</body>
+</html>

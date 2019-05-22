@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<form th:action="@{/person/update}" method="post">
+    <fieldset>
+        <legend><h1>修改！！表单！！！</h1></legend>
+        <input type="hidden" name="id" th:field="${person.id}"/>
+        <h2>姓名：</h2> <input type="text" name="name" th:field="${person.name}"/>
+        <hr/>
+        <h2>年龄：</h2> <input type="text" name="age" th:field="${person.age}"/>
+        <hr/>
+        <h2>地址：</h2> <input type="text" name="address" th:field="${person.address}"/>
+        <hr/>
+        <input type="submit" value="提交"><br><br>
+        <input type="reset" value="重置">
+    </fieldset>
+</form>
+</body>
+</html>

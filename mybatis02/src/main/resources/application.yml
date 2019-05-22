@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring?serverTimezone=GMT&useUnicode=true&characterEncoding=UTF-8
+    password: password
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+mybatis:
+  #加载mybatis的映射文件
+  mapper-locations: classpath:mapping/*Mapper.xml
+    #自动为实体类起别名
+  type-aliases-package: com.tanlei.cn.pojo
