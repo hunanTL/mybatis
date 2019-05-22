@@ -10,6 +10,7 @@ public class Application {
 
     public static void main(String[] args) {
         System.out.println("版本控制相关");
+        System.out.println("commit提交面板");
         SpringApplication.run(Application.class, args);
     }
 
