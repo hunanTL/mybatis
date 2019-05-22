@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace与接口全名称相同-->
+<mapper namespace="com.example.ssm.mapper.UserDao">
+    <!--id与方法名称相同  parameterType方法入参数类型-->
+    <insert id="insertUser" parameterType="com.example.ssm.pojo.User">
+        insert into  user( name, age) values (#{name},#{age})
+    </insert>
+
+    <select id="selectUserAll" resultType="com.example.ssm.pojo.User">
+        select id,name,age from user
+    </select>
+
+    <select id="selectBYUserId" resultType="com.example.ssm.pojo.User" >
+        select id,name,age from user where id=#{value}
+    </select>
+
+    <update id="updateUser" parameterType="com.example.ssm.pojo.User">
+        update user set name =#{name},age=#{age}  where id=#{id}
+    </update>
+
+    <delete id="deleteUser" >
+        delete from user where id=#{id}
+    </delete>
+</mapper>
